@@ -1,5 +1,4 @@
-console.log(__dirname)
+const sayHello = require('./5-utils')
+const names = require('./4-name')
 
-setInterval(() => {
-    console.log("Hello world")
-}, 1000)
+sayHello(names)
