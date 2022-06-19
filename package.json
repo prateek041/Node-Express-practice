@@ -1,0 +1,23 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "Let's see how it all works on the backend. And i love how it works",
+  "main": "1-intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateek041/Node-project01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prateek041/Node-project01/issues"
+  },
+  "homepage": "https://github.com/prateek041/Node-project01#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "lodash": "^4.17.21"
+  }
+}
