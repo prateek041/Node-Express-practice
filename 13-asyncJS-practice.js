@@ -9,23 +9,26 @@
 
 let globalData;
 
-
 let curStatus = true
-const comment = "hehe boii"
+const number = 10
 
 const tryFunc = (comment, curStatus) => {
     return new Promise((success, fail) => {
         if (curStatus == true) {
-            success(`yo boy, here is your comment: ${comment}`)
+            success(`yo boy, here is your number increased by 1: ${number + 1}`)
         }
         fail("im not ready as of now")
     })
 }
 
 
-tryFunc(comment, curStatus).then((data) => globalData = data).catch((err) => console.log(err))
+const syncfunc = async () => {
+    await tryFunc(number, curStatus).then((data) => globalData = data).catch((err) => console.log(err))
+    console.log("tryFunc function finished executing");
+    console.log(globalData)
+}
 
-console.log(globalData)
+syncfunc()
 
 
 
