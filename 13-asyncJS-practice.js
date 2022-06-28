@@ -1,11 +1,14 @@
-const promise = new Promise((resolve, reject) => {
-    // resolve("hehe boi we are good")
-    reject("Bruh")
-})
+// const promise = new Promise((resolve, reject) => {
+//     resolve("hehe boi we are good")
+//     // reject("Bruh")
+// })
 
-console.log(promise.catch((err) => console.log(err)))
+// console.log(promise.catch((err) => console.log(err)))
 
 // console.log(promise.then((success) => console.log(success)))
+
+let globalData;
+
 
 let curStatus = true
 const comment = "hehe boii"
@@ -19,10 +22,14 @@ const tryFunc = (comment, curStatus) => {
     })
 }
 
-// tryFunc(comment, curStatus).then((data) => console.log(data)).catch((err) => console.log(err))
-tryFunc(comment, curStatus).then((data) => console.log(data)).catch((err) => console.log(err))
 
-console.log('we are waiting or are we done ?')
+tryFunc(comment, curStatus).then((data) => globalData = data).catch((err) => console.log(err))
+
+console.log(globalData)
+
+
+
+// console.log('we are waiting or are we done ?')
 
 // promise is an object, which has properties that define the status of that promise.
 
